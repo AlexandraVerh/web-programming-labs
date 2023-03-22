@@ -1,0 +1,23 @@
+body {
+    background-color:  rgb(189, 183, 240);
+    color: rgb(94, 5, 5);
+    font-family: Arial;
+    margin: 0px;
+}
+
+header {
+    background-color: black; 
+    color: lightgreen;
+    padding: 10px; 
+    font-size: 16pt;
+}
+
+footer {
+    background-color: rgb(189, 183, 240);
+    color: maroon;
+    padding: 10px; 
+    font-size: 14pt;
+    margin: 0px;
+    font-style: italic;
+    text-align: right;
+}
