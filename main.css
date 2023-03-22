@@ -12,6 +12,15 @@ header {
     font-size: 16pt;
 }
 
+header:hover {
+    background: linear-gradient(to top, rgb(189, 183, 240), blue );
+}
+
+header:active {
+    color: aliceblue;
+    font-size: 20pt;
+}
+
 footer {
     background: linear-gradient(to right , red,orange,yellow,green,lightblue, blue, rgb(162, 0, 255));
     color: maroon;
@@ -20,6 +29,15 @@ footer {
     margin: 0px;
     font-style: italic;
     text-align: right;
+}
+
+footer:hover {
+    background: linear-gradient(to bottom, rgb(189, 183, 240), blue );
+}
+
+footer:active {
+    color: aliceblue;
+    font-size: 20pt;
 }
 
 a{
