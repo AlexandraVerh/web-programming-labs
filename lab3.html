@@ -53,11 +53,46 @@
             transition: 1000ms 0.7s;
             text-shadow: 7px 7px 3px rgb(191, 82, 255);
         }
+
+        h1 {
+            font-size: 26pt;
+
+        }
+
+        h1:before {
+            content: '';
+            display: block;
+            height: 3px; 
+            background: #0011ff; 
+            width: 50px; 
+            margin: 0px;
+            transition: 1s;
+        }
+
+        h1:hover:before {
+            width: 300px;
+            transition: 1s;
+        }
+
+        h1:after {
+            content: '';
+            display: block;
+            height: 3px; 
+            background: #0011ff; 
+            width: 50px; 
+            margin: 0px;
+            transition: 1s;
+        }
+
+        h1:hover:after {
+            width: 300px;
+            transition: 1s;
+        }
     </style>
 </head>
 <body>
     <header >
-        НГТУ, ФБ, Лабораторная работа 2
+        НГТУ, ФБ, Лабораторная работа 3
     </header>
 
     <main>
