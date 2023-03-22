@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background-color: black; 
-    color: lightgreen;
+    background-color: rgb(189, 183, 240); 
+    color: rgb(48, 0, 151);
     padding: 10px; 
     font-size: 16pt;
 }
