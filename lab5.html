@@ -53,6 +53,25 @@
             output.style.backgroundColor = backColor;
             output.style.color = textColor;
             output.style.border = borderF; 
+            
+        }
+        function kor() {
+            let inputK = document.getElementById('nK')
+            let inputP = document.getElementById('nP')
+            let inputT = document.getElementById('nT')
+            let inputS = document.getElementById('nS')
+            let inputM = document.getElementById('nM')
+
+            let K = parseInt(inputK.value);
+            let P = parseInt(inputP.value);
+            let T = parseInt(inputT.value);
+            let S = parseInt(inputS.value);
+            let M = parseInt(inputM.value);
+
+            let res = (K*100)+(P*250)+(T*350)+(S*100)+(M*50);
+            alert('Общая стоимость ' + res);
+            let output1 = document.getElementById('output1')
+            output1.innerHTML = 'Общая цена: ' + res;
         }
     </script>
     <style>
@@ -73,6 +92,20 @@
             width: 300px;
             height: 40px;
         }
+
+        #output1 {
+            font-size: 20pt;
+            color: rgb(171, 43, 226);
+        }
+
+        .kor {
+            margin-top: 20px;
+            border: 1px solid;
+            border-radius: 20px;
+            width: 340px;
+            height: 350px;
+            padding: 5px;
+        }
     </style>
 </head>
 
@@ -92,7 +125,7 @@
         <div class="message" onclick="showDel()">Найти деление</div>
         <div class="message" onclick="showPr()">Найти произведение</div>
 
-        <div>
+        <div style="margin: 5px;">
             <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', 'dotted yellow')">
             <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'double lime')">
             <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'aqua', 'Indigo', 'groove Indigo')">
@@ -100,6 +133,17 @@
         </div>
 
         <div id="output"></div>
+
+        <div class="kor"  >
+        <div><h1><b>Корзина товаров</b></h1></div>
+        <label>Кексы(100р/шт): <br><input type="number" min="0" value="0" id="nK"></label><br>
+        <label>Пирожные(250р/шт): <br><input type="number" min="0" value="0" id="nP"></label><br>
+        <label>Тортики(350р/шт): <br><input type="number" min="0" value="0" id="nT"></label><br>
+        <label>Сок(100р/шт): <br><input type="number" min="0" value="0" id="nS"></label><br>
+        <label>Чай(50р/шт): <br><input type="number" min="0" value="0" id="nM"></label><br>
+        <input type="button" value="Рассчитать" onclick="kor()" style="cursor: pointer;" >
+        <div id="output1"></div>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
