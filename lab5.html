@@ -47,6 +47,13 @@
             let author = 'Здравствуйте, автор страницы:\nВерхозина Александра Андреевна';
             alert(author);
         }
+        function changeOutput(buttonNum, backColor, textColor, borderF) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.border = borderF; 
+        }
     </script>
     <style>
         .message {
@@ -59,6 +66,12 @@
             height: 25px;
             padding: 7px;
             text-align: center;
+        }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -78,6 +91,15 @@
         <div class="message" onclick="showRaz()">Найти разность чисел</div>
         <div class="message" onclick="showDel()">Найти деление</div>
         <div class="message" onclick="showPr()">Найти произведение</div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', 'dotted yellow')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'double lime')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'aqua', 'Indigo', 'groove Indigo')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'DeepPink', 'Navy', 'dashed Navy')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer onclick="showAuthor()">
