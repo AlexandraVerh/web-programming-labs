@@ -73,6 +73,11 @@
             let output1 = document.getElementById('output1')
             output1.innerHTML = 'Общая цена: ' + res;
         }
+
+        function removekrugi(number) {
+            let del = document.getElementById(number)
+            del.style.opacity = '0'
+        }
     </script>
     <style>
         .message {
@@ -105,6 +110,60 @@
             width: 340px;
             height: 350px;
             padding: 5px;
+        }
+
+        .krugi div {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            line-height: 67px;
+            margin-right: 20px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 30px;
+            border: 1px solid;
+        }
+
+        .krug1 {
+            background-color: #1722f5
+        }
+
+        .krug2 {
+            background-color: #7f19ed;
+        }
+
+        .krug3 {
+            background-color: #bf00fe;
+        }
+
+        .krug4 {
+            background-color: #fc00fc;
+        }
+
+        .krug5 {
+            background-color: #ff00cc;
+        }
+
+        .krug6 {
+            background-color: #2196f3;
+        }
+
+        .krug7 {
+            background-color: #00bcd4;
+        }
+        .krug8 {
+            background-color: #03ffe6;
+        }
+
+        .krug9 {
+            background-color: #33ff00;
+        }
+
+        .krug10 {
+            background-color: #6fff00;
         }
     </style>
 </head>
@@ -144,6 +203,19 @@
         <input type="button" value="Рассчитать" onclick="kor()" style="cursor: pointer;" >
         <div id="output1"></div>
         </div>
+
+        <div class="krugi">
+            <div class="krug1" id="1" onclick="removekrugi('1')">1</div>
+            <div class="krug2" id="2" onclick="removekrugi('2')">2</div>
+            <div class="krug3" id="3" onclick="removekrugi('3')">3</div>
+            <div class="krug4" id="4" onclick="removekrugi('4')">4</div>
+            <div class="krug5" id="5" onclick="removekrugi('5')">5</div>
+            <div class="krug6" id="6" onclick="removekrugi('6')">6</div>
+            <div class="krug7" id="7" onclick="removekrugi('7')">7</div>
+            <div class="krug8" id="8" onclick="removekrugi('8')">8</div>
+            <div class="krug9" id="9" onclick="removekrugi('9')">9</div>
+            <div class="krug10" id="10" onclick="removekrugi('10')">10</div>
+            </div>
     </main>
 
     <footer onclick="showAuthor()">
