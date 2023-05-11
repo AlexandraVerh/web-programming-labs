@@ -57,10 +57,37 @@
             number = Math.floor(Math.random() * 100) + 1;
             let screens = document.getElementsByClassName('game');
             document.getElementById('user-number').value='';
+            document.getElementById('try-count').innerHTML = count;
+            document.getElementById('result').innerHTML = '';
             screens[1].style.display = 'block';
             screens[2].style.display = 'none';
            }
+           
+           function prav() {
+            let screens = document.getElementsByClassName('pom');
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+           }
+           function skrit() {
+            let screens = document.getElementsByClassName('pom');
+            screens[1].style.display = 'none';
+            screens[0].style.display = 'block';
+           }
     </script>
+    <style>
+        .pom {
+            border: 1px solid;
+            border-radius: 20px;
+            width: auto;
+            height: auto;
+            background-color: rgba(0, 255, 255, 0.222);
+            padding: 15px;
+        }
+        .knop {
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -96,6 +123,20 @@
                 <button onclick="again()">Сыграть еще раз</button>
             </div>
         </div>
+
+        <div class="pom">
+            <button class="knop" onclick="prav()">Правила игры</button>
+        </div>
+        <div class="pom" style="display: none;"> 
+            <button class="knop" onclick="skrit()"> Скрыть правила игры </button>
+            <ol type="I">
+                <li>Чтобы поиграть нажмите кнопку "сыграть в игру"</li>
+                <li>Отгадываемое число должно быть в диапазоне от 1 до 100</li>
+                <li>Вводите возможные числа в окошко ( можете менять его с помощью стрелочек)</li>
+                <li>После того, как введете число, нажмите на кнопку "Угадать"</li>
+                <li>Когда угадаете, то можете еще раз сыграть нажав на кнопку " Сыграть еще раз"</li>
+            </ol>
+         </div>
 
     </main>
 
