@@ -50,8 +50,6 @@
                 }
 
                 }
-                
-           
            function again() {
             count=0
             number = Math.floor(Math.random() * 100) + 1;
@@ -73,6 +71,38 @@
             screens[1].style.display = 'none';
             screens[0].style.display = 'block';
            }
+           function changeColor(div) {
+                if(div.style.backgroundColor == 'blue') {
+                    div.style.backgroundColor = 'blueviolet';
+                    div.style.color = 'lime';
+                    document.getElementById('color-name').innerHTML = 'фиолетовый';
+                }
+                else if(div.style.backgroundColor == 'blueviolet') {
+                    div.style.backgroundColor = 'pink';
+                    div.style.color = 'navy';
+                    document.getElementById('color-name').innerHTML = 'розовый';
+                }
+                else if(div.style.backgroundColor == 'pink') {
+                    div.style.backgroundColor = 'coral';
+                    div.style.color = 'black';
+                    document.getElementById('color-name').innerHTML = 'оранжевый';
+                }
+                else if(div.style.backgroundColor == 'coral') {
+                    div.style.backgroundColor = 'gold';
+                    div.style.color = 'green';
+                    document.getElementById('color-name').innerHTML = 'желтый';
+                }
+                else if(div.style.backgroundColor == 'gold') {
+                    div.style.backgroundColor = 'skyblue';
+                    div.style.color = 'indigo';
+                    document.getElementById('color-name').innerHTML = 'голубой';
+                }
+                else {
+                    div.style.backgroundColor = 'blue';
+                    div.style.color = 'white';
+                    document.getElementById('color-name').innerHTML = ' синий';
+                }
+            }
     </script>
     <style>
         .pom {
@@ -86,6 +116,16 @@
         .knop {
             cursor: pointer;
             display: inline-block;
+        }
+        .color {
+            border: 1px solid;
+            width: 170px;
+            height: 100px;
+            background-color: blue;
+            padding: 15px;
+            margin: 15px;
+            text-align: center;
+            color: aliceblue;
         }
     </style>
 </head>
@@ -136,6 +176,10 @@
                 <li>После того, как введете число, нажмите на кнопку "Угадать"</li>
                 <li>Когда угадаете, то можете еще раз сыграть нажав на кнопку " Сыграть еще раз"</li>
             </ol>
+         </div>
+         
+         <div class="color" ondblclick="changeColor(this)"> Цвет:<span id="color-name"> синий</span><br> 
+            Сделайте двойной щелчок, чтобы сменить.
          </div>
 
     </main>
