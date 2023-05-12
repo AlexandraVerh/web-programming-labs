@@ -103,6 +103,18 @@
                     document.getElementById('color-name').innerHTML = ' синий';
                 }
             }
+            function perem(click) {
+                if(click.style.float == 'left') {
+                    click.style.float = 'right';
+                    click.style.transition = '1000ms 0.5s';
+                    click.style.transform = 'rotate(4turn)';
+                }
+                else {
+                    click.style.float = 'left';
+                    click.style.transition = '1000ms 1s';
+                    click.style.transform == 'rotate(0)';
+                }
+            }
     </script>
     <style>
         .pom {
@@ -126,6 +138,21 @@
             margin: 15px;
             text-align: center;
             color: aliceblue;
+            cursor: pointer;
+            padding-top: 30px;
+        }
+        .dvig {
+            border: 1px solid;
+            width: 150px;
+            height: 50px;
+            padding-top: 30px;
+            text-align: center;
+            cursor: pointer;
+            background-color: blueviolet;
+            color: aliceblue;
+            position: relative;
+            left: 16px;
+            
         }
     </style>
 </head>
@@ -181,6 +208,8 @@
          <div class="color" ondblclick="changeColor(this)"> Цвет:<span id="color-name"> синий</span><br> 
             Сделайте двойной щелчок, чтобы сменить.
          </div>
+
+         <div class="dvig" onclick="perem(this)"> Щелкни меня</div>
 
     </main>
 
