@@ -14,6 +14,7 @@ header {
 
 main{
     margin: 10px 20px;
+    
 }
 
 header:hover {
@@ -33,6 +34,11 @@ footer {
     margin: 0px;
     font-style: italic;
     text-align: right;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    position: fixed;
 }
 
 footer:hover {
