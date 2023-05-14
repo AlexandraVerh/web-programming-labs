@@ -106,13 +106,91 @@
             function perem(click) {
                 if(click.style.float == 'left') {
                     click.style.float = 'right';
-                    click.style.transition = '1000ms 0.5s';
+                    click.style.transition = '10000ms 0.5s';
                     click.style.transform = 'rotate(4turn)';
                 }
                 else {
                     click.style.float = 'left';
                     click.style.transition = '1000ms 1s';
                     click.style.transform == 'rotate(0)';
+                }
+            }
+            function yv(tyk){
+                if(tyk.style.width == '100px') {
+                    tyk.style.width = '150px';
+                    tyk.style.backgroundColor = 'salmon';
+                }
+                else if(tyk.style.width == '150px') {
+                    tyk.style.width = '200px';
+                    tyk.style.backgroundColor = 'red';
+                }
+                else if(tyk.style.width == '200px') {
+                    tyk.style.width = '250px';
+                    tyk.style.backgroundColor = 'hotpink';
+                }
+                else if(tyk.style.width == '250px') {
+                    tyk.style.width = '300px';
+                    tyk.style.backgroundColor = 'tomato';
+                }
+                else if(tyk.style.width == '300px') {
+                    tyk.style.width = '350px';
+                    tyk.style.backgroundColor = 'yellow';
+                }
+                else if(tyk.style.width == '350px') {
+                    tyk.style.width = '400px';
+                    tyk.style.backgroundColor = 'lime';
+                }
+                else if(tyk.style.width == '400px') {
+                    tyk.style.width = '450px';
+                    tyk.style.backgroundColor = 'mediumseagreen';
+                }
+                else if(tyk.style.width == '450px') {
+                    tyk.style.width = '500px';
+                    tyk.style.backgroundColor = 'aquamarine';
+                }
+                else if(tyk.style.width == '500px') {
+                    tyk.style.width = '550px';
+                    tyk.style.backgroundColor = 'skyblue';
+                }
+                else if(tyk.style.width == '550px') {
+                    tyk.style.width = '600px';
+                    tyk.style.backgroundColor = 'mediumblue';
+                }
+                else if(tyk.style.width == '600px') {
+                    tyk.style.width = '650px';
+                    tyk.style.backgroundColor = 'mediumslateblue';
+                }
+                else if(tyk.style.width == '650px') {
+                    tyk.style.width = '700px';
+                    tyk.style.backgroundColor = 'violet';
+                }
+                else if(tyk.style.width == '700px') {
+                    tyk.style.width = '750px';
+                    tyk.style.backgroundColor = 'magenta';
+                }
+                else if(tyk.style.width == '750px') {
+                    tyk.style.width = '800px';
+                    tyk.style.backgroundColor = 'blueviolet';
+                }
+                else if(tyk.style.width == '800px') {
+                    tyk.style.width = '850px';
+                    tyk.style.backgroundColor = 'darkorchid';
+                }
+                else if(tyk.style.width == '850px') {
+                    tyk.style.width = '900px';
+                    tyk.style.backgroundColor = 'purple';
+                }
+                else if(tyk.style.width == '900px') {
+                    tyk.style.width = '950px';
+                    tyk.style.backgroundColor = 'indigo';
+                }
+                else if(tyk.style.width == '950px') {
+                    tyk.style.width = '1000px';
+                    tyk.style.backgroundColor = 'darkslateblue';
+                }
+                else {
+                    tyk.style.width = '100px';
+                    tyk.style.backgroundColor = 'fuchsia';
                 }
             }
     </script>
@@ -154,10 +232,22 @@
             left: 16px;
             
         }
+        .shir {
+            border: 1px solid;
+            width: 100px;
+            height: 50px;
+            padding-top: 30px;
+            text-align: center;
+            cursor: pointer;
+            background-color:fuchsia;
+            color: rgb(68, 0, 255);
+            margin: 15px;
+
+        }
     </style>
 </head>
 
-<body>
+<body oncopy="return false;" style="user-select: none;">
     <header >
         НГТУ, ФБ, Лабораторная работа 6
     </header>
@@ -210,6 +300,8 @@
          </div>
 
          <div class="dvig" onclick="perem(this)"> Щелкни меня</div>
+
+         <div class="shir" onclick="yv(this)">Пиу</div>
 
     </main>
 
