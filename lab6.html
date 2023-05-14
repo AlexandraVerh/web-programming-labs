@@ -193,6 +193,39 @@
                     tyk.style.backgroundColor = 'fuchsia';
                 }
             }
+            function filter() {
+                let color = document.getElementById('wear-color').value;
+                let type = document.getElementById('wear-type').value;
+                let wear = document.getElementById('wear');
+
+                if(color == 'Красный' && type == 'Футболка') {
+                    wear.src = 'red-f.jpg'
+                }
+                if(color == 'Красный' && type == 'Поло') {
+                    wear.src = 'red-p.jpg'
+                }
+                if(color == 'Красный' && type == 'Майка') {
+                    wear.src = 'red-m.jpg'
+                }
+                if(color == 'Белый' && type == 'Футболка') {
+                    wear.src = 'white-f.jpg'
+                }
+                if(color == 'Белый' && type == 'Поло') {
+                    wear.src = 'white-p.jpg'
+                }
+                if(color == 'Белый' && type == 'Майка') {
+                    wear.src = 'white-m.jpg'
+                }
+                if(color == 'Черный' && type == 'Футболка') {
+                    wear.src = 'black-f.jpg'
+                }
+                if(color == 'Черный' && type == 'Поло') {
+                    wear.src = 'black-p.jpg'
+                }
+                if(color == 'Черный' && type == 'Майка') {
+                    wear.src = 'black-m.jpg'
+                }
+            }
     </script>
     <style>
         .pom {
@@ -302,6 +335,26 @@
          <div class="dvig" onclick="perem(this)"> Щелкни меня</div>
 
          <div class="shir" onclick="yv(this)">Пиу</div>
+
+         <div>
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option >Белый</option>
+                <option >Черный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option >Футболка</option>
+                <option >Поло</option>
+                <option >Майка</option>
+            </select><br>
+
+            <button onclick="filter()">ОК</button><br>
+
+            <img id="wear">
+         </div>
 
     </main>
 
