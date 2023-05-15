@@ -261,8 +261,9 @@
             cursor: pointer;
             background-color: blueviolet;
             color: aliceblue;
-            position: relative;
-            left: 16px;
+            float: left;
+            
+            transform: rotate();
             
         }
         .shir {
@@ -273,9 +274,15 @@
             text-align: center;
             cursor: pointer;
             background-color:fuchsia;
-            color: rgb(68, 0, 255);
-            margin: 15px;
+            position: relative;
+            top: 100px;
+            left: 25px;
 
+        }
+        .filter {
+            margin-top: 120px;
+            margin-right: 100px;
+            
         }
     </style>
 </head>
@@ -334,9 +341,9 @@
 
          <div class="dvig" onclick="perem(this)"> Щелкни меня</div>
 
-         <div class="shir" onclick="yv(this)">Пиу</div>
+         <div class="shir" onclick="yv(this)"></div>
 
-         <div>
+         <div class="filter">
             Цвет одежды:
             <select id="wear-color">
                 <option>Красный</option>
