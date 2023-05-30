@@ -48,7 +48,24 @@
             
 
         }
-        
+        function knop() {
+            let numkrug = document.getElementById('numkrug').value;
+            let krugi = document.getElementById('krugi');
+            for (let i = numkrug; i > 0; i--) {
+                let kr = document.createElement('div');
+                kr.style.width = '60px';
+                kr.style.height = '60px';
+                kr.style.borderRadius = '100px';
+                kr.style.textAlign = 'center';
+                if (i % 2 == 0) {
+                kr.style.backgroundColor = 'rgb(30, 144, 255)'
+                }
+                else { kr.style.backgroundColor = 'rgb(238, 130, 238)'
+                }
+                kr.innerHTML = i;
+                krugi.appendChild(kr);
+            }
+        }
     </script>
 </head>
 <body>
@@ -66,6 +83,10 @@
         <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id="transparent-blocks"></div>
         
+        <label>Введите количество кругов: </label>
+        <input type="number" value="5"  placeholder="введите число кругов" id="numkrug"></span>
+        <button onclick="knop()">Голубой/Фиолетовый</button> <br>
+        <div id="krugi"></div>
 
     </main>
 
