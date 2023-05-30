@@ -75,6 +75,41 @@
                 umn.appendChild(tab);
             }
         }
+        function kurs() {
+            let data = [ '30.05.2023', '29.05.2023','26.05.2023','25.05.2023','24.05.2023','23.05.2023','22.05.2023','19.05.2023',
+                        '18.05.2023','17.05.2023'];
+            let kur = [0.10672, 0.1070, 0.1104, 0.1067, 0.1098, 0.1097, 0.1100,
+                        0.1117, 0.1093, 0.1108]
+            let tab = document.getElementById('fsk');
+            for(let i =0; i < data.length; i++){
+                let tr = document.createElement('tr');
+                let tdData = document.createElement('td');
+                tdData.innerHTML = data[i];
+                tr.appendChild(tdData);
+                let tdKur = document.createElement('td');
+                tdKur.innerHTML = kur[i];
+                tr.appendChild(tdKur);
+                let tdRaz = document.createElement('td');
+                if (i==0) {
+                    tdRaz.innerHTML = '-';
+                }
+                else {
+                    tdRaz.innerHTML = (kur[i]-kur[i-1]).toFixed(4);
+                }
+                tr.appendChild(tdRaz);
+                tab.appendChild(tr);
+            }
+            let sum = 0;
+            for(let i = 0; i < kur.length; i++) {
+                sum = sum + kur[i];
+            }
+            let sr = sum / kur.length;
+            document.getElementById('sr').innerHTML = 'Среднее значение: ' + sr;
+            let min = Math.min(...kur);
+            document.getElementById('min').innerHTML = 'Минимальное значение: ' + min;
+            let max = Math.max(...kur);
+            document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+        }
     </script>
 </head>
 <body>
@@ -100,6 +135,11 @@
         <button onclick="tabl()">Таблица умножения на 51</button>
         <div id="umn"></div>
 
+        <button onclick="kurs()">Курс акций  ФСК - Россети</button>
+        <table border="3" id="fsk"></table>
+        <div id="sr"></div>
+        <div id="min"></div>
+        <div id="max"></div>
         
         
 
