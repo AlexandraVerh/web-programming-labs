@@ -66,6 +66,15 @@
                 krugi.appendChild(kr);
             }
         }
+        function tabl() {
+            let umn = document.getElementById('umn');
+            for (let i =13; i<34; i++) {
+                let tab = document.createElement('div');
+                tab.innerHTML = i + '*' + 51 + '=' + (i*51);
+                tab.style.color = 'navy';
+                umn.appendChild(tab);
+            }
+        }
     </script>
 </head>
 <body>
@@ -85,8 +94,14 @@
         
         <label>Введите количество кругов: </label>
         <input type="number" value="5"  placeholder="введите число кругов" id="numkrug"></span>
-        <button onclick="knop()">Голубой/Фиолетовый</button> <br>
+        <button onclick="knop()">Голубой/Фиолетовый</button> 
         <div id="krugi"></div>
+        
+        <button onclick="tabl()">Таблица умножения на 51</button>
+        <div id="umn"></div>
+
+        
+        
 
     </main>
 
